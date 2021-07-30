@@ -7,6 +7,7 @@ namespace UserRegistration_UsingAnnotations
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registartion Practice Problem Using Annotation");
+            AnnotationsTest.Display();
         }
     }
 }
