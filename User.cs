@@ -8,7 +8,7 @@ namespace UserRegistration_UsingAnnotations
     class User
     {
         [Required(ErrorMessage = "User {0} is required")]
-        [RegularExpression(@"^[A-Za-z]{8,}", ErrorMessage = "Please enter minimum 8 character")]
+        [RegularExpression(@"^[A-Z][A-Za-z0-9]{7,}$", ErrorMessage = "Please enter at least one UpperCase ")]
         [DataType(DataType.Password)]
         public string password { get; set; }
     }
