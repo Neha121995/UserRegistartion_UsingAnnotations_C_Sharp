@@ -8,8 +8,8 @@ namespace UserRegistration_UsingAnnotations
     class User
     {
         [Required(ErrorMessage = "User {0} is required")]
-        [StringLength(100, MinimumLength = 2, ErrorMessage = "Name should have minimum of 2 charaters and maximum 100 characters")]
+        [StringLength(100, MinimumLength = 2, ErrorMessage = "Last Name should have minimum of 2 charaters and maximum 100 characters")]
         [DataType(DataType.Text)]
-        public string Name { get; set; }
+        public string LastName { get; set; }
     }
 }
