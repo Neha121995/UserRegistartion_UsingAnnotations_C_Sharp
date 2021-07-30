@@ -10,10 +10,10 @@ namespace UserRegistration_UsingAnnotations
     {
         public static void Display()
         {
-            Console.WriteLine("User Registration Email Validations");
+            Console.WriteLine("User Registration Mobile Number Validations");
             Console.WriteLine("===============================");
             User objUser = new User();
-            objUser.Email = "jagtapneha12@gmail.com";
+            objUser.mobileNumber = "9";
             ValidationContext context = new ValidationContext(objUser, null, null);
             List<ValidationResult> results = new List<ValidationResult>();
             bool valid = Validator.TryValidateObject(objUser, context, results, true);
@@ -21,13 +21,13 @@ namespace UserRegistration_UsingAnnotations
             {
                 foreach (ValidationResult TotalResult in results)
                 {
-                    Console.WriteLine("Email is :: {0}", TotalResult.MemberNames.First(), Environment.NewLine);
+                    Console.WriteLine("Mobile Number is :: {0}", TotalResult.MemberNames.First(), Environment.NewLine);
                     Console.WriteLine("Error Msg :: {0}{1}", TotalResult.ErrorMessage, Environment.NewLine);
                 }
             }
             else
             {
-                Console.WriteLine("Email :: " + objUser.Email);
+                Console.WriteLine("Mobile Number is :: " + objUser.mobileNumber);
             }
             Console.WriteLine("\nPress any key to exit");
             Console.ReadKey();
